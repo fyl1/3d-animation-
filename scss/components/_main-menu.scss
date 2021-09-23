@@ -1,0 +1,251 @@
+.main-nav {
+  margin-right: -12px;
+  outline: none;
+}
+.btn-nav {
+  height: 35px;
+  min-width: 163px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-weight: 500;
+  background-color: transparent;
+
+  outline: none;
+}
+// #menu__toggle {
+//   opacity: 0;
+// }
+
+#menu__toggle {
+  opacity: 0;
+  outline: none;
+  display: none;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+  background-color: #dedddd;
+  border: none;
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+  background-color: #dedddd;
+  border: none;
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+  border: none;
+  outline: none;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  right: 3px;
+  top: 3px;
+  width: 40px;
+  height: 30px;
+  color: #000000;
+  cursor: pointer;
+  z-index: 100;
+  outline: none;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  top: 10px;
+  right: 0px;
+  background-color: #fff;
+  transition-duration: 0.25s;
+  outline: none;
+}
+.menu__btn > span::before {
+  content: "";
+  width: 35px;
+
+  top: 9px;
+}
+.menu__btn > span::after {
+  content: "";
+  width: 35px;
+
+  top: -9px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 140px 5% 80px 0;
+  list-style: none;
+  z-index: 99;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  border: none;
+  outline: none;
+  background: transparent;
+  // box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+
+  transition-duration: 0.25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 18px 24px;
+  color: #ffffff;
+  font-family: "MyriadPro-Regular", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition-duration: 0.25s;
+  outline: none;
+}
+.menu__item:hover {
+  color: #deeaf5;
+}
+
+.main-nav__item--active > .main-nav__link {
+}
+.sticky .main-nav__link {
+}
+
+.logo {
+  display: block;
+}
+
+.logo__link {
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+@media (min-width: 480px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1100px) {
+}
+@media (min-width: 1200px) {
+  .menu__box {
+    left: 0;
+    display: flex;
+    position: relative;
+    visibility: visible;
+    padding: 0;
+  }
+  .main-nav {
+    height: 100%;
+    margin: 0;
+  }
+
+  .menu__btn {
+    display: none;
+  }
+  .hamburger-menu {
+    padding: 3px 0 7px 0;
+  }
+  .menu__item {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: #fff;
+    }
+  }
+}
+
+@media (min-width: 1686px) {
+}
+@media (min-width: 1786px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 579px) {
+}
+@media (max-width: 479px) {
+}
+@media (max-width: 379px) {
+}
+@media (min-width: 480px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1100px) {
+}
+@media (min-width: 1240px) {
+}
+
+@media (min-width: 1686px) {
+}
+@media (min-width: 1786px) {
+}
+@media (max-width: 1199px) {
+  .header-logo_2 {
+    display: none;
+  }
+  .header-listing {
+    display: none;
+  }
+  .hamburger-menu {
+    padding: 8px 10px;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  .menu__box {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    color: #000000;
+  }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 579px) {
+}
+@media (max-width: 479px) {
+}
+@media (max-width: 379px) {
+}
